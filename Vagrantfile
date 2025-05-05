@@ -21,6 +21,8 @@ Vagrant.configure("2") do |config|
           vb.cpus       = "2"
       end
   end
+  
+  config.vm.provision "shell", path: "gh.sh", privileged: false
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
